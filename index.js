@@ -18,21 +18,26 @@ function calcDiscount(price){
 const result2 = calcDiscount(190);
 console.log(result2)
 
-// const course = {
-//   discount : 30,
-//   title: "next.js",
-//   price : 240,
-//   students : ["ali","vahid","saheb"],
-//   isFree: false,
-//   category :{
-//     id:1,
-//     englishTitle: "frontend",
-//     title: "front-end",
-//   },
-//   clacOfprice : function(){
 
-//      this.offPrice = this.price - (this.price * this.discount/100);
-//      return this.offPrice;
-   
-//   },
+const course = {
+  title :"javascript",
+  discount :30,
+  price :240,
+  students :["ali","vahid","saheb"],
+  isFree :false,
+  category: {
+    id :1,
+    title :"frontend",
+    englishTitle :"front",
+  },
+  calcOffprice :function(){
+    this.offPrice = this.price - (this.price * this.discount/100);
+    return  this.offPrice;
+  }
 
+}
+
+// const resultDiscount = course.calcOffprice();
+// console.log(resultDiscount);
+console.log(course.calcOffprice());
+console.log(course.offPrice);
