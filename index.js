@@ -22,7 +22,7 @@ const cart = [
   },
 ]
 
-const enRolledCart = [];
+const enRolledCart = [1,2];
 
 function checkedEnrolled (carts, enRolled){
 
