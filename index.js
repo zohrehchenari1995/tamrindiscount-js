@@ -1,23 +1,36 @@
 
+const cart = [
+  {
+    id:1,
+    title:"p-1",
+    price:100,
+  },
+  {
+    id:2,
+    title:"p-2",
+    price:110,
+  },
+  {
+    id:3,
+    title:"p-3",
+    price:120,
+  },
+  {
+    id:4,
+    title:"p-4",
+    price:130,
+  },
+]
 
-// !capitalize satement
-const userName = "sAHeb"; 
+const enRolledCart = [];
 
-function capitalizeFirstLetter (string){
-  const lowerCaseString = string.toLowerCase();
-  const newString = lowerCaseString[0].toUpperCase() + lowerCaseString.slice(1);
-  return newString;
-}
-console.log(capitalizeFirstLetter("sAHeb"));
+function checkedEnrolled (carts, enRolled){
 
-function capitalizeStatemant(string){
-  const name = string.split(" ");
-  const newNames = [];
-  for(const n of name){
-    newNames.push(capitalizeFirstLetter(n));
-    return newNames.join(" ");
+   const cartCourseIds = carts.map((getIdCart)=> { return getIdCart.id});
+   const found = enRolled.some((item)=> { return cartCourseIds.includes(item)});
+   if(found) {
+    return "your course is exist"
   };
-  
+   return "your successfuly regidter";
 }
-const message = "the dogs,dogs are my favorite pet";
-console.log(capitalizeStatemant(message));
+console.log(checkedEnrolled(cart,enRolledCart))
